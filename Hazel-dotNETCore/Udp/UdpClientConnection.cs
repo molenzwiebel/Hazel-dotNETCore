@@ -29,6 +29,8 @@ namespace Hazel.Udp
         public event Action<byte[], int> DataReceivedRaw;
 #endif
 
+        public ManualResetEvent ConnectWaitLock => connectWaitLock;
+
         /// <summary>
         ///     Creates a new UdpClientConnection.
         /// </summary>
