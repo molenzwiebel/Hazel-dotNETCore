@@ -52,6 +52,11 @@ namespace Hazel.Udp
             this.Dispose(false);
         }
 
+        public void RemoveDisconnectListeners()
+        {
+            this.Disconnected = null;
+        }
+
         private void ManageReliablePacketsInternal(object state)
         {
             base.ManageReliablePackets();
