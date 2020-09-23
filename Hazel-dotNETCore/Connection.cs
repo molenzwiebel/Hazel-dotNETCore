@@ -241,6 +241,11 @@ namespace Hazel
             GC.SuppressFinalize(this);
         }
 
+        public void RemoveDisconnectListeners()
+        {
+            this.Disconnected = null;
+        }
+
         /// <summary>
         ///     Disposes of this NetworkConnection.
         /// </summary>
